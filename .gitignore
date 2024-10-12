@@ -1,0 +1,11 @@
+# Ignore the virtual environment folder
+.venv/
+
+# Ignore MediaPipe folder (if it's a local dependency)
+mediapipe
+
+HandTrackingMin.py
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
