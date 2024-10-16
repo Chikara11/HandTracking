@@ -9,3 +9,4 @@ HandTrackingMin.py
 # Ignore compiled Python files
 *.pyc
 __pycache__/
+

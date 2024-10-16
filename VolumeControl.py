@@ -41,7 +41,8 @@ volPercentage=0
 while True:
     success, img = cap.read()
     img = detector.findHands(img)
-    lmList = detector.findPosition(img,draw =False)
+    #Added a bounding box
+    lmList, bbox = detector.findPosition(img,draw =False)
     if len(lmList) !=0:
         #print(lmList[4],lmList[8])
         x1, y1 = lmList[4][1],lmList[4][2]
@@ -87,6 +88,3 @@ while True:
 
 
 
-    #I imported the handtracking module that I created using mediapipe then identifyed the number of the two fingers
-    #then after that I circled them drew a line, circled the middle of the line and now I have to measure the length 
-    #of the line using the hypo function in the math library to change the volume based on that 
